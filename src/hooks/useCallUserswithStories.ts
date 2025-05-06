@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import type { StoryGroup } from "../types"
-const useCallUsers = () => {
-    const [users, setUsers] = useState<StoryGroup[]>([])
+const useCallUserswithStories = () => {
+    const [storiesWithUsers, setstoriesWithUsers] = useState<StoryGroup[]>([])
     const [loading, setloading] = useState<boolean>(false)
 
 
@@ -13,9 +13,9 @@ const useCallUsers = () => {
                 throw new Error("Failed to fetch users");
             }
             const data = await response.json();
-            setUsers(data);
+            setstoriesWithUsers(data);
         } catch (error) {
-            setUsers([])
+            setstoriesWithUsers([])
         }
         finally {
             setloading(false)
@@ -26,7 +26,7 @@ const useCallUsers = () => {
         fecthusers()
     }, [])
 
-    return { loading, users }
+    return { loading, storiesWithUsers }
 }
 
-export default useCallUsers
+export default useCallUserswithStories

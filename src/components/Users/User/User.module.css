@@ -1,0 +1,12 @@
+.userContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.userContainer img {
+    width: 8vh;
+    height: 8vh;
+    border-radius: 60px;
+
+}

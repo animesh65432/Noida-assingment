@@ -1,15 +1,16 @@
 import React from 'react'
 import type { StoryGroup } from "../../../types"
 
-interface StoryListProps {
-    storyGroups: StoryGroup[];
+interface StoryProps {
+    storyGroups: StoryGroup
 
 }
 
 
-const Srorie: React.FC<StoryListProps> = ({ storyGroups }) => {
+const Srorie: React.FC<StoryProps> = ({ storyGroups }) => {
     return (
         <div>
+            <></>
         </div>
     )
 }

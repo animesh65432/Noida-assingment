@@ -1,10 +1,11 @@
 import React from 'react'
-import { Srories } from "./components"
+import { Users } from "./components"
+import Styles from "./App.module.css"
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Srories />
+    <div className={Styles.container}>
+      <Users />
     </div>
   )
 }

@@ -1,3 +1,4 @@
 import Srories from "./Stories";
+import Users from "./Users";
 
-export { Srories }
+export { Srories, Users }

@@ -4,7 +4,7 @@ export interface User {
     avatar: string;
 }
 
-export interface Story {
+export interface StoryType {
     id: string;
     imageUrl: string;
     createdAt: string;
@@ -14,6 +14,6 @@ export interface Story {
 export interface StoryGroup {
     userId: string;
     user: User;
-    stories: Story[];
+    stories: StoryType[];
     seen: boolean;
 }

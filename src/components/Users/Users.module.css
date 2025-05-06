@@ -3,4 +3,5 @@
     padding: 1rem;
     gap: 10px;
     width: 100vw;
+    overflow-y: scroll;
 }

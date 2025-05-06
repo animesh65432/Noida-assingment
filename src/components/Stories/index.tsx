@@ -9,8 +9,7 @@ const Srories: React.FC = () => {
         return <div></div>
     }
     return (
-        <div>{
-            users.map((user, index) => <Srorie user={user} key={index} />)}
+        <div>
         </div>
     )
 }

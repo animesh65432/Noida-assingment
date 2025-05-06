@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import type { UsersTypes } from "../types"
+import type { StoryGroup } from "../types"
 const useCallUsers = () => {
-    const [users, setUsers] = useState<UsersTypes[]>([])
+    const [users, setUsers] = useState<StoryGroup[]>([])
     const [loading, setloading] = useState<boolean>(false)
 
 

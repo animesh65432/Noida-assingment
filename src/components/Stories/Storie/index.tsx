@@ -1,14 +1,16 @@
 import React from 'react'
-import type { UsersTypes } from "../../../types"
+import type { StoryGroup } from "../../../types"
 
-type Props = {
-    user: UsersTypes
+interface StoryProps {
+    storyGroups: StoryGroup
+
 }
 
-const Srorie: React.FC<Props> = ({ user }) => {
+
+const Srorie: React.FC<StoryProps> = ({ storyGroups }) => {
     return (
         <div>
-            <img src={user.picture} />
+            <></>
         </div>
     )
 }

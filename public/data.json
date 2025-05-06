@@ -1,53 +1,292 @@
 [
-    {
-      "id": 1,
-      "name": "Animesh Dutta",
-      "picture": "https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg"
+  {
+    "userId": "1",
+    "user": {
+      "id": "1",
+      "username": "janedoe",
+      "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150"
     },
-    {
-      "id": 2,
-      "name": "Saikat dutta",
-      "picture": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?semt=ais_hybrid&w=740"
+    "stories": [
+      {
+        "id": "101",
+        "imageUrl": "https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T12:00:00Z",
+        "user": {
+          "id": "1",
+          "username": "janedoe",
+          "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      },
+      {
+        "id": "102",
+        "imageUrl": "https://images.pexels.com/photos/3155667/pexels-photo-3155667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T12:05:00Z",
+        "user": {
+          "id": "1",
+          "username": "janedoe",
+          "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      }
+    ],
+    "seen": false
+  },
+  {
+    "userId": "2",
+    "user": {
+      "id": "2",
+      "username": "johndoe",
+      "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150"
     },
-    {
-      "id": 3,
-      "name": "Sneha paul",
-      "picture": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+    "stories": [
+      {
+        "id": "201",
+        "imageUrl": "https://images.pexels.com/photos/1785493/pexels-photo-1785493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T13:00:00Z",
+        "user": {
+          "id": "2",
+          "username": "johndoe",
+          "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      }
+    ],
+    "seen": false
+  },
+  {
+    "userId": "3",
+    "user": {
+      "id": "3",
+      "username": "mary_smith",
+      "avatar": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
     },
-    {
-      "id": 4,
-      "name": "kakan roy",
-      "picture": "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww"
+    "stories": [
+      {
+        "id": "301",
+        "imageUrl": "https://images.pexels.com/photos/2249063/pexels-photo-2249063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T14:00:00Z",
+        "user": {
+          "id": "3",
+          "username": "mary_smith",
+          "avatar": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      },
+      {
+        "id": "302",
+        "imageUrl": "https://images.pexels.com/photos/3591557/pexels-photo-3591557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T14:05:00Z",
+        "user": {
+          "id": "3",
+          "username": "mary_smith",
+          "avatar": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      },
+      {
+        "id": "303",
+        "imageUrl": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T14:10:00Z",
+        "user": {
+          "id": "3",
+          "username": "mary_smith",
+          "avatar": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      }
+    ],
+    "seen": false
+  },
+  {
+    "userId": "4",
+    "user": {
+      "id": "4",
+      "username": "sam_wilson",
+      "avatar": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=150"
     },
-    {
-      "id": 5,
-      "name": "Ankita sen",
-      "picture": "https://img.freepik.com/free-photo/little-girl-showing-thumb-up-white-blouse-looking-confident-front-view_176474-34295.jpg?semt=ais_hybrid&w=740"
+    "stories": [
+      {
+        "id": "401",
+        "imageUrl": "https://images.pexels.com/photos/1707215/pexels-photo-1707215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T15:00:00Z",
+        "user": {
+          "id": "4",
+          "username": "sam_wilson",
+          "avatar": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      },
+      {
+        "id": "402",
+        "imageUrl": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T15:05:00Z",
+        "user": {
+          "id": "4",
+          "username": "sam_wilson",
+          "avatar": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      }
+    ],
+    "seen": false
+  },
+  {
+    "userId": "5",
+    "user": {
+      "id": "5",
+      "username": "alex_parker",
+      "avatar": "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150"
     },
-    {
-      "id": 6,
-      "name": "Ronaldo",
-      "picture": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTfJlJcwyyD8Dv6LuFXi4fGxVOTp48V4O0iXFy-DCrsYIzqdVbz8N--sr86MM812S__r8huZQTuz4kTLlMnYVVPGQ"
+    "stories": [
+      {
+        "id": "501",
+        "imageUrl": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T16:00:00Z",
+        "user": {
+          "id": "5",
+          "username": "alex_parker",
+          "avatar": "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      }
+    ],
+    "seen": false
+  },
+  {
+    "userId": "1",
+    "user": {
+      "id": "1",
+      "username": "janedoe",
+      "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150"
     },
-    {
-      "id": 7,
-      "name": "Messi",
-      "picture": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSQ-78iZn9LmSHDqD4ioFCThlEExt5Kz80ZobRRqh0SmecBvDGUzxeyB5jPIXe9iT27jVCiUTOqLq7Q_AMZox8ppQ"
+    "stories": [
+      {
+        "id": "101",
+        "imageUrl": "https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T12:00:00Z",
+        "user": {
+          "id": "1",
+          "username": "janedoe",
+          "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      },
+      {
+        "id": "102",
+        "imageUrl": "https://images.pexels.com/photos/3155667/pexels-photo-3155667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T12:05:00Z",
+        "user": {
+          "id": "1",
+          "username": "janedoe",
+          "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      }
+    ],
+    "seen": false
+  },
+  {
+    "userId": "2",
+    "user": {
+      "id": "2",
+      "username": "johndoe",
+      "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150"
     },
-    {
-      "id": 8,
-      "name": "Modi",
-      "picture": "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQCyzdroOgXf1JRT-59-ejJoIE0a9KVvyVwXUrA5xytU8gCuncLXYXL3DO2b1_-YnaUWD0lgEsd3ddXvZg"
+    "stories": [
+      {
+        "id": "201",
+        "imageUrl": "https://images.pexels.com/photos/1785493/pexels-photo-1785493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T13:00:00Z",
+        "user": {
+          "id": "2",
+          "username": "johndoe",
+          "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      }
+    ],
+    "seen": false
+  },
+  {
+    "userId": "3",
+    "user": {
+      "id": "3",
+      "username": "mary_smith",
+      "avatar": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
     },
-    {
-      "id": 9,
-      "name": "Rahul",
-      "picture": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRBj7CAQMi7WeAlJfI-GmVFf6xyiAR_u0MTaOnpDMQFVF1dbOpj"
+    "stories": [
+      {
+        "id": "301",
+        "imageUrl": "https://images.pexels.com/photos/2249063/pexels-photo-2249063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T14:00:00Z",
+        "user": {
+          "id": "3",
+          "username": "mary_smith",
+          "avatar": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      },
+      {
+        "id": "302",
+        "imageUrl": "https://images.pexels.com/photos/3591557/pexels-photo-3591557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T14:05:00Z",
+        "user": {
+          "id": "3",
+          "username": "mary_smith",
+          "avatar": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      },
+      {
+        "id": "303",
+        "imageUrl": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T14:10:00Z",
+        "user": {
+          "id": "3",
+          "username": "mary_smith",
+          "avatar": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      }
+    ],
+    "seen": false
+  },
+  {
+    "userId": "4",
+    "user": {
+      "id": "4",
+      "username": "sam_wilson",
+      "avatar": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=150"
     },
-    {
-      "id": 10,
-      "name": "Mamata Banerjee",
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsVk80bRzi2Jm2qiu-_XDzlJweEKFr2k0V0V9f_BNrZnMTEnFi6STx0jzP-rjK0zBuuHsHq82INvMv5wbwufKYnQ"
-    }
-  ]
-  
+    "stories": [
+      {
+        "id": "401",
+        "imageUrl": "https://images.pexels.com/photos/1707215/pexels-photo-1707215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T15:00:00Z",
+        "user": {
+          "id": "4",
+          "username": "sam_wilson",
+          "avatar": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      },
+      {
+        "id": "402",
+        "imageUrl": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T15:05:00Z",
+        "user": {
+          "id": "4",
+          "username": "sam_wilson",
+          "avatar": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      }
+    ],
+    "seen": false
+  },
+  {
+    "userId": "5",
+    "user": {
+      "id": "5",
+      "username": "alex_parker",
+      "avatar": "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150"
+    },
+    "stories": [
+      {
+        "id": "501",
+        "imageUrl": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2023-10-04T16:00:00Z",
+        "user": {
+          "id": "5",
+          "username": "alex_parker",
+          "avatar": "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150"
+        }
+      }
+    ],
+    "seen": false
+  }
+]

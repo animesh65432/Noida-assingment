@@ -3,7 +3,6 @@ import type { Dispatch, SetStateAction } from 'react';
 import type { StoryGroup } from '../../types';
 import Story from './Story';
 import styles from './Stories.module.css';
-//
 type Props = {
     storieswithusers: StoryGroup | null;
     setisStoriesCLicked: Dispatch<SetStateAction<boolean>>;
@@ -63,6 +62,7 @@ const Stories: React.FC<Props> = ({ currentUserIndex, storieswithusers, setisSto
             setAnimationKey(prev => prev + 1);
         } else {
             goToNextUser();
+            setCurrentIndex(0)
 
         }
     };
@@ -75,6 +75,7 @@ const Stories: React.FC<Props> = ({ currentUserIndex, storieswithusers, setisSto
     return (
         <div
             className={styles.overlay}
+            id='overlay'
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
             onMouseDown={handleTouchStart}
@@ -82,6 +83,7 @@ const Stories: React.FC<Props> = ({ currentUserIndex, storieswithusers, setisSto
         >
             <button
                 className={styles.closeButton}
+                id='closeButton'
                 onClick={() => setisStoriesCLicked(false)}
             >
                 ×
@@ -119,8 +121,8 @@ const Stories: React.FC<Props> = ({ currentUserIndex, storieswithusers, setisSto
             </div>
 
             <div className={styles.navigationContainer}>
-                <div className={styles.leftClickZone} onClick={handlePrev}></div>
-                <div className={styles.rightClickZone} onClick={handleNext}></div>
+                <div className={styles.leftClickZone} onClick={handlePrev} id='leftClickZone'></div>
+                <div className={styles.rightClickZone} onClick={handleNext} id='rightClickZone'></div>
             </div>
         </div>
     );

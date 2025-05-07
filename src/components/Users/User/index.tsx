@@ -9,7 +9,7 @@ type UserProps = {
 const User: React.FC<UserProps> = ({ userwithstories }) => {
     return (
         <>
-            <div className={styles.userContainer} >
+            <div className={styles.userContainer} id='userContainer' >
                 <img src={userwithstories.user.avatar} />
                 <p>{userwithstories.user.username}</p>
             </div>

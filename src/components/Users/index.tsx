@@ -29,7 +29,7 @@ const Users: React.FC = () => {
 
     return (
         <>
-            <div className={Styles.UsersConatainer}>
+            <div className={Styles.UsersConatainer} id='UsersConatainer'>
                 {storiesWithUsers.map((user, index) => (
                     <div key={index} onClick={() => handleUserClick(index)}>
                         <User userwithstories={user} />

@@ -3,20 +3,31 @@ import type { Dispatch, SetStateAction } from 'react';
 import type { StoryGroup } from '../../types';
 import Story from './Story';
 import styles from './Stories.module.css';
-
+//
 type Props = {
     storieswithusers: StoryGroup | null;
     setisStoriesCLicked: Dispatch<SetStateAction<boolean>>;
     goToNextUser: () => void;
     goToPreviousUser: () => void
+    currentUserIndex: number
 };
 
-const Stories: React.FC<Props> = ({ storieswithusers, setisStoriesCLicked, goToNextUser, goToPreviousUser }) => {
+const Stories: React.FC<Props> = ({ currentUserIndex, storieswithusers, setisStoriesCLicked, goToNextUser, goToPreviousUser }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
     const [animationKey, setAnimationKey] = useState(0);
+    const [userId, setUserId] = useState<number>(0);
 
     const stories = storieswithusers?.stories ?? [];
+
+
+    useEffect(() => {
+        if (storieswithusers?.user?.id) {
+            setUserId(currentUserIndex);
+            setCurrentIndex(0);
+            setAnimationKey(prev => prev + 1);
+        }
+    }, [storieswithusers?.user?.id]);
 
     useEffect(() => {
         if (!stories.length || isPaused) return;
@@ -27,14 +38,13 @@ const Stories: React.FC<Props> = ({ storieswithusers, setisStoriesCLicked, goToN
                 setAnimationKey(prev => prev + 1);
             } else {
                 goToNextUser();
-                setAnimationKey(0)
                 setCurrentIndex(0)
+
             }
         }, 5000);
 
         return () => clearTimeout(timer);
-    }, [currentIndex]);
-
+    }, [currentIndex, isPaused, stories.length]);
 
     const handlePrev = () => {
         if (currentIndex > 0) {
@@ -42,8 +52,8 @@ const Stories: React.FC<Props> = ({ storieswithusers, setisStoriesCLicked, goToN
             setAnimationKey(prev => prev + 1);
         }
         else {
-            goToPreviousUser()
-            setCurrentIndex(0)
+            goToPreviousUser();
+
         }
     };
 
@@ -52,13 +62,13 @@ const Stories: React.FC<Props> = ({ storieswithusers, setisStoriesCLicked, goToN
             setCurrentIndex((prev) => prev + 1);
             setAnimationKey(prev => prev + 1);
         } else {
-            goToNextUser()
-            setCurrentIndex(0)
+            goToNextUser();
+
         }
     };
 
     const handleTouchStart = () => setIsPaused(true);
-    const handleTouchEnd = () => setIsPaused(false)
+    const handleTouchEnd = () => setIsPaused(false);
 
     if (!storieswithusers || stories.length === 0) return <div>No stories available</div>;
 
@@ -79,12 +89,12 @@ const Stories: React.FC<Props> = ({ storieswithusers, setisStoriesCLicked, goToN
 
             <div className={styles.progressBarContainer}>
                 {stories.map((_, index) => (
-                    <div key={index} className={styles.bar}>
+                    <div key={`${userId}-${index}`} className={styles.bar}>
                         <div
-                            key={currentIndex === index ? animationKey : undefined}
+                            key={currentIndex === index ? `${userId}-${index}-${animationKey}` : `${userId}-${index}`}
                             className={`${styles.fill} ${currentIndex === index ? styles.animateProgress : ''}`}
                             style={{
-                                width: currentIndex > index ? '100%' : '0%',
+                                width: currentIndex > index ? '100%' : currentIndex === index ? '0%' : '0%',
                                 animationPlayState: isPaused ? 'paused' : 'running',
                             }}
                         />

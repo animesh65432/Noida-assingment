@@ -27,7 +27,6 @@ const Users: React.FC = () => {
         }
     };
 
-
     return (
         <>
             <div className={Styles.UsersConatainer}>
@@ -43,6 +42,7 @@ const Users: React.FC = () => {
                     setisStoriesCLicked={setisStoriesClicked}
                     goToNextUser={goToNextUser}
                     goToPreviousUser={goToPreviousUser}
+                    currentUserIndex={currentUserIndex}
                 />
             )}
         </>

@@ -7,6 +7,7 @@ type Props = {
 };
 
 const Story: React.FC<Props> = ({ story }) => {
+
     return (
         <div className={styles.storyWrapper}>
             <div className={styles.imageContainer}>

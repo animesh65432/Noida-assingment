@@ -7,9 +7,11 @@ import styles from './Stories.module.css';
 type Props = {
     storieswithusers: StoryGroup | null;
     setisStoriesCLicked: Dispatch<SetStateAction<boolean>>;
+    goToNextUser: () => void;
+    goToPreviousUser: () => void
 };
 
-const Stories: React.FC<Props> = ({ storieswithusers, setisStoriesCLicked }) => {
+const Stories: React.FC<Props> = ({ storieswithusers, setisStoriesCLicked, goToNextUser, goToPreviousUser }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
     const [animationKey, setAnimationKey] = useState(0);
@@ -24,17 +26,24 @@ const Stories: React.FC<Props> = ({ storieswithusers, setisStoriesCLicked }) => 
                 setCurrentIndex((prev) => prev + 1);
                 setAnimationKey(prev => prev + 1);
             } else {
-                setisStoriesCLicked(false);
+                goToNextUser();
+                setAnimationKey(0)
+                setCurrentIndex(0)
             }
         }, 5000);
 
         return () => clearTimeout(timer);
-    }, [currentIndex, stories.length, setisStoriesCLicked, isPaused, animationKey]);
+    }, [currentIndex]);
+
 
     const handlePrev = () => {
         if (currentIndex > 0) {
             setCurrentIndex((prev) => prev - 1);
             setAnimationKey(prev => prev + 1);
+        }
+        else {
+            goToPreviousUser()
+            setCurrentIndex(0)
         }
     };
 
@@ -43,14 +52,15 @@ const Stories: React.FC<Props> = ({ storieswithusers, setisStoriesCLicked }) => 
             setCurrentIndex((prev) => prev + 1);
             setAnimationKey(prev => prev + 1);
         } else {
-            setisStoriesCLicked(false);
+            goToNextUser()
+            setCurrentIndex(0)
         }
     };
 
     const handleTouchStart = () => setIsPaused(true);
-    const handleTouchEnd = () => setIsPaused(false);
+    const handleTouchEnd = () => setIsPaused(false)
 
-    if (!storieswithusers) return null;
+    if (!storieswithusers || stories.length === 0) return <div>No stories available</div>;
 
     return (
         <div

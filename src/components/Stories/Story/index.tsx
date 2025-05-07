@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import type { StoryType } from '../../../types';
 import styles from './Story.module.css';
 
@@ -7,6 +7,17 @@ type Props = {
 };
 
 const Story: React.FC<Props> = ({ story }) => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(true);
+        }, 50);
+        return () => {
+            setIsVisible(false);
+            clearTimeout(timer);
+        };
+    }, [story.imageUrl]);
 
     return (
         <div className={styles.storyWrapper}>
@@ -14,13 +25,11 @@ const Story: React.FC<Props> = ({ story }) => {
                 <img
                     src={story.imageUrl}
                     alt="story"
-                    className={styles.image}
+                    className={`${styles.image} ${isVisible ? styles.visible : ''}`}
                 />
-
-
             </div>
         </div>
-    )
+    );
 };
 
 export default Story;
